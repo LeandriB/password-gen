@@ -11,6 +11,10 @@ function generatePassword() {
 
   var pwLength = window.prompt("How long do you want your password to be? (must be between 8 and 128 characters)");
 
+  while (pwLength < 8 || pwLength > 128 || !Number.isInteger(Number(pwLength))) {
+    pwLength = window.prompt("Try Again! Password length must be between 8 and 128!😠" );
+  }
+
   // randomPassword available to help generate password 
   var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   var lower = "abcdefghijklmnopqrstuvwxyz";
@@ -56,7 +60,7 @@ function generatePassword() {
   for (var i=0; i < pwLength; i++) {
     result = result + randomPassword[Math.floor(Math.random() * randomPassword.length)]; //
     console.log(result)
-}
+  }
   // Returns randomized password
   return result;
 }
