@@ -6,9 +6,10 @@ var generateBtn = document.querySelector("#generate");
 
 //TODO: Add function here
 function generatePassword() {
-  // Empty string to concatenate characters
+  // Empty string to concatenate randomPassword
   var randomPassword = ""
-  // Characters available to help generate password 
+
+  // randomPassword available to help generate password 
   var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   var lower = "abcdefghijklmnopqrstuvwxyz";
   var numbers = "0123456789";
@@ -19,23 +20,37 @@ function generatePassword() {
   var wantsNumber = window.confirm("Do you want numbers letter in your password?");
   var wantsSpecial = window.confirm("Do you want special characters in your password?");
 
-  switch (wantsUpper) {
-  case wantsUpper: 
+  if (wantsUpper) {
     randomPassword = randomPassword + upper;
-    break;
-  case wantsLower:
-    randomPassword = randomPassword + lower;
-    break;
-  case wantsNumber:
-    randomPassword = randomPassword + numbers;
-    break;
-  case wantsSpecial:
-    randomPassword = randomPassword + special;
-    break;
-    default:
-      return window.alert("You did not pick a valid option. Try again.");
+    console.log(randomPassword)
   }
+
+  if (wantsLower) {
+      randomPassword = randomPassword + lower;
+      console.log(randomPassword)
+  }
+
+  if (wantsNumber) {
+      randomPassword = randomPassword + numbers;
+      console.log(randomPassword)
+  }
+
+  if (wantsSpecial) {
+      randomPassword = randomPassword + special;
+      console.log(randomPassword)
+  }
+
+  if (randomPassword === "") {
+      //return "You did not pick a valid option. Try again."
+      return window.alert("You did not pick a valid option. Try again.");
+      //TODO: Make it prompt user to select again
+  }
+
+  var result = "";
+  randomPassword = randomPassword.split('')
+  console.log(randomPassword);
   // Returns randomized password
+
   return result;
 }
 
