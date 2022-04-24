@@ -19,8 +19,24 @@ function generatePassword() {
   var wantsNumber = window.confirm("Do you want numbers letter in your password?");
   var wantsSpecial = window.confirm("Do you want special characters in your password?");
 
+  switch (wantsUpper) {
+  case wantsUpper: 
+    randomPassword = randomPassword + upper;
+    break;
+  case wantsLower:
+    randomPassword = randomPassword + lower;
+    break;
+  case wantsNumber:
+    randomPassword = randomPassword + numbers;
+    break;
+  case wantsSpecial:
+    randomPassword = randomPassword + special;
+    break;
+    default:
+      return window.alert("You did not pick a valid option. Try again.");
+  }
   // Returns randomized password
-  return upper;
+  return result;
 }
 
 // Write password to the #password input
