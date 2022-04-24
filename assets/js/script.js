@@ -1,10 +1,8 @@
-// Assignment code here
-
-
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
+var copyBtn = document.querySelector("#copy");
 
-//TODO: Add function here
+// Generates Password
 function generatePassword() {
   // Empty string to concatenate randomPassword
   var randomPassword = ""
@@ -26,43 +24,44 @@ function generatePassword() {
   var wantsNumber = window.confirm("Do you want numbers letter in your password?");
   var wantsSpecial = window.confirm("Do you want special characters in your password?");
 
+  // User input validations
+
   if (wantsUpper) {
     randomPassword = randomPassword + upper;
-    console.log(randomPassword)
   }
 
   if (wantsLower) {
       randomPassword = randomPassword + lower;
-      console.log(randomPassword)
   }
 
   if (wantsNumber) {
       randomPassword = randomPassword + numbers;
-      console.log(randomPassword)
   }
 
   if (wantsSpecial) {
       randomPassword = randomPassword + special;
-      console.log(randomPassword)
   }
 
-  if (randomPassword === "") {
-      //return "You did not pick a valid option. Try again."
-      return window.alert("You did not pick a valid option. Try again.");
-      //TODO: Make it prompt user to select again
+  if (randomPassword == "") {
+    window.alert("You did not pick a valid option. Try again.");
+    return "Generate Password Again."
   }
-
+  
   var result = "";
   randomPassword = randomPassword.split('')
-  console.log(randomPassword);
   
   // Creates a random password when looping over randomPassword string
   for (var i=0; i < pwLength; i++) {
-    result = result + randomPassword[Math.floor(Math.random() * randomPassword.length)]; //
-    console.log(result)
+    result = result + randomPassword[Math.floor(Math.random() * randomPassword.length)];
   }
   // Returns randomized password
   return result;
+}
+
+// Copies generated password
+function copyPassword() {
+  var copyText = document.getElementById("password");
+  copyText.select();
 }
 
 // Write password to the #password input
@@ -76,3 +75,4 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+copyBtn.addEventListener("click", copyPassword);

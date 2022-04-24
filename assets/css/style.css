@@ -88,6 +88,13 @@ header {
   cursor: pointer;
 }
 
+.btn:hover {
+  filter: brightness(107%);
+  border-radius: 25px;
+  transform: scale(1);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
 button[disabled] {
   cursor: default;
   background: #c0c7cf;

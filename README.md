@@ -1,4 +1,4 @@
-# Password Generator Starter Code
+# Password Generator
 
 The goal for this project is to build a password generator that randomly generates a strong password that meets specific criteria.
 
@@ -37,7 +37,9 @@ View a [live preview](https://leandrib.github.io/password-gen/) of my project.
 
 ## Attributions
 
+* [Starter Code](https://github.com/coding-boot-camp/friendly-parakeet)
 * [Number.isInteger() method](https://www.w3schools.com/jsref/jsref_isinteger.asp)
 * [String to an array](https://stackabuse.com/how-to-convert-a-string-to-an-array-in-javascript/)
-* [Starter Code](https://github.com/coding-boot-camp/friendly-parakeet)
 * [How to use window.prompt](https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt)
+* [While Loop](https://www.w3schools.com/js/js_loop_while.asp)
+* [Copy Button](https://www.w3schools.com/howto/howto_js_copy_clipboard.asp)
